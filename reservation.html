@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="images/jpg" href="images/logo.png">
+
+  <title>Hôtel Le Pleasant-Reservation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+
+
+
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </div>
+
+
+        <a href="reservation-html" class="logo"><img src="new/logo.png" alt=""></a>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="Offres.html" class="nav-link active">Offres & Promos</a>
+          </li>
+          <li class="nav-item">
+            <a href="reservation.html" class="nav-link active">Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a href="brunch.html" class="nav-link active">Cafe & Brunch</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero-2" id="hero">
+    <div class="container">
+      <h2 class="sub-headline-1">
+        <span class="first-letter">R</span>eservation
+      </h2>
+      <h1 class="headline"></h1>
+      <div class="headline-description">
+        <div class="separator">
+          <div class="line line-left"></div>
+          <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+          <div class="line line-right"></div>
+        </div>
+        <div class="single-animation">
+          <h5>De l’Historique au Glamour
+            à petits prix</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation">
+    <div class="content-2">
+      <h2>Verifiez votre disponibilite</h2>
+      <p>N'hésitez pas à nous contacter avant votre reservation.</p>
+    </div>
+  </section>
+
+
+
+
+
+  <!--Calendar-->
+
+
+  <section class="sectionResa">
+    <div class="containerCalendar">
+      <div class="calendar">
+        <div class="months">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1>Mai</h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Dim</div>
+          <div>Lun</div>
+          <div>Mar</div>
+          <div>Mer</div>
+          <div>Jeu</div>
+          <div>Ven</div>
+          <div>Sam</div>
+        </div>
+        <div class="days">
+        </div>
+      </div>
+    </div>
+    <script>
+      const date = new Date();
+
+      const renderCalendar = () => {
+        date.setDate(1);
+
+        const monthDays = document.querySelector(".days");
+
+        const lastDay = new Date(
+          date.getFullYear(),
+          date.getMonth() + 1,
+          0
+        ).getDate();
+
+        const prevLastDay = new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          0
+        ).getDate();
+
+        const firstDayIndex = date.getDay();
+
+        const lastDayIndex = new Date(
+          date.getFullYear(),
+          date.getMonth() + 1,
+          0
+        ).getDay();
+
+        const nextDays = 7 - lastDayIndex - 1;
+
+        const months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+
+        document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+
+        document.querySelector(".date p").innerHTML = new Date().toDateString();
+
+        let days = "";
+
+        for (let x = firstDayIndex; x > 0; x--) {
+          days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+        }
+
+        for (let i = 1; i <= lastDay; i++) {
+          if (
+            i === new Date().getDate() &&
+            date.getMonth() === new Date().getMonth()
+          ) {
+            days += `<div class="today">${i}</div>`;
+          } else {
+            days += `<div>${i}</div>`;
+          }
+        }
+
+        for (let j = 1; j <= nextDays; j++) {
+          days += `<div class="next-date">${j}</div>`;
+          monthDays.innerHTML = days;
+        }
+      };
+
+      document.querySelector(".prev").addEventListener("click", () => {
+        date.setMonth(date.getMonth() - 1);
+        renderCalendar();
+      });
+
+      document.querySelector(".next").addEventListener("click", () => {
+        date.setMonth(date.getMonth() + 1);
+        renderCalendar();
+      });
+
+      renderCalendar();
+
+    </script>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Footer-->
+
+
+
+  <footer>
+    <div class="container">
+      <div class="back-to-top">
+        <a href="#hero"> <i class="fas fa-chevron-up"></i> </a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-content-about animate-up">
+          <h4>A Propos de l'Hotel</h4>
+          <div class="asterisk"> <i class="fa fa-asterisk" aria-hidden="true"></i></div>
+          <p>1 rue Pleasant, Sutton (Québec) J0E 2K0
+            (Suivre le lien pour les indications Google Maps)
+
+            +1 450 538-6188
+            +1 888 538-6188
+            info@lepleasant.com</p>
+        </div>
+        <div class="footer-content-divider animate-bottom">
+          <div class="social-media">
+            <h4>Suivez-nous</h4>
+            <ul class="social-icons">
+              <li>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.facebook.com/LePleasant"><i class="fab fa-facebook-square"></i></a>
+              </li>
+              <li>
+                <a target="_blank"
+                  href="https://www.tripadvisor.fr/Hotel_Review-g499380-d1837368-Reviews-Le_Pleasant_Hotel_Cafe-Sutton_Quebec.html"><i
+                    class="fab fa-tripadvisor"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="newsletter-container">
+            <h4>Newsletter</h4>
+            <form action="" class="newsletter-form">
+              <input type="text" class="newsletter-input" placeholder="Votre courriel">
+              <button class="newsletter-btn" type="submit">
+                <i class="fas fa-envelope-open"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
