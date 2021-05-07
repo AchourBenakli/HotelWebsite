@@ -657,7 +657,6 @@ header {
 /*Discover our rooms .hero-1*/
 
 .hero-1-seperate {
-
     margin-bottom: 20px;
 }
 
@@ -1013,6 +1012,8 @@ footer {
     .newsletter-btn {
         margin-left: 7.5rem;
     }
+
+
 }
 
 @media screen and (max-width : 900px) {
@@ -1025,6 +1026,25 @@ footer {
         grid: none;
         width: 500px;
     }
+}
+
+@media screen and (max-width : 964px) {
+    .DescriptionRoom {
+        display: block;
+    }
+
+    .hero-1-seperate .label {
+        width: 100%;
+    }
+
+    .item3 .content .label {
+        width: 100%;
+    }
+
+    .item4 .content .label {
+        width: 100%;
+    }
+
 }
 
 /* @media screen and (max-width :1148px) and (min-width: 900px) {
