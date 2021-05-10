@@ -1062,16 +1062,15 @@ footer {
     .contactForm {
         height: 750px;
         background-position: bottom;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
         text-align: center;
-        padding-left: 180px;
         padding-top: 0rem;
 
     }
 
     .wrapperc {
         margin: 0 auto;
-        background-color: blue;
     }
 }
 
