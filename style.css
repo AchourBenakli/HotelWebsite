@@ -1016,12 +1016,17 @@ footer {
 }
 
 @media screen and (max-width : 900px) {
-    .contactForm {
+
+    .contactForm,
+    .btn {
         background: none;
+        display: flex;
+        justify-content: center;
+
     }
 
     .wrapperc {
-        background-color: red;
+        padding-top: 0px;
         grid: none;
         width: 500px;
     }
