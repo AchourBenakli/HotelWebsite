@@ -1,10 +1,13 @@
-let submit = document.getElementsByClassName('submit');
+const selectElement = function (element) {
+  return document.querySelector(element);
+}
 
-submit.addEventListener('click', (e) => {
-  e.preventDefault();
-  alert('Hello world');
-})
+let menuToggler = selectElement('.menu-toggle');
+let body = selectElement('body');
 
+menuToggler.addEventListener('click', function () {
+  body.classList.toggle('open');
+});
 
 
 

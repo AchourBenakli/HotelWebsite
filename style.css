@@ -920,7 +920,6 @@ footer {
         justify-content: initial;
         flex-direction: row;
         transform: initial;
-        transition: initial;
     }
 
     .nav-item {
@@ -950,10 +949,8 @@ footer {
         bottom: -3px;
     }
 
-
     .sub-headline {
         font-size: 10rem;
-
     }
 
     .first-letter {
@@ -1078,9 +1075,6 @@ footer {
         margin: 0 auto;
     }
 }
-
-
-
 
 /*Media queries Animation*/
 
