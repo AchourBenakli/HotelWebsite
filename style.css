@@ -949,8 +949,16 @@ footer {
         bottom: -3px;
     }
 
+    .DescriptionRoom {
+        margin: 40px;
+    }
+
     .sub-headline {
         font-size: 10rem;
+    }
+
+    .sub-headline-1 {
+        font-size: 8rem;
     }
 
     .first-letter {
@@ -1008,8 +1016,6 @@ footer {
     .newsletter-btn {
         margin-left: 7.5rem;
     }
-
-
 }
 
 @media screen and (max-width : 900px) {
@@ -1029,9 +1035,10 @@ footer {
     }
 }
 
-@media screen and (max-width : 964px) {
+@media screen and (min-width:500px) and (max-width : 964px) {
     .DescriptionRoom {
         display: block;
+        margin-left: 100px;
     }
 
     .hero-1-seperate .label {
@@ -1044,6 +1051,44 @@ footer {
 
     .item4 .content .label {
         width: 100%;
+    }
+
+    .item5 {
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .DescriptionRoom {
+        display: block;
+    }
+
+    .hero-1-seperate .content {
+        width: 100%;
+    }
+
+    .hero-1-seperate .label {
+        width: 100%;
+    }
+
+    .item3 .content .label {
+        width: 100%;
+    }
+
+    .item4 .content .label {
+        width: 100%;
+    }
+
+    .item5 {
+        padding-top: 20px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .containerCalendar {
+        display: none;
     }
 }
 
@@ -1073,6 +1118,43 @@ footer {
 
     .wrapperc {
         margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width:720px) {
+
+    .sub-headline,
+    span {
+        font-size: 50px;
+    }
+
+    .Brunch3 {
+        display: none;
+    }
+
+    .Brunch4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .sub-headline,
+    span {
+        font-size: 50px;
+    }
+
+    .image-group-1 .Brunch2 {
+        height: 200px;
+    }
+
+    .Brunch3 {
+        display: none;
+    }
+
+    .Brunch4 {
+        display: none;
     }
 }
 
