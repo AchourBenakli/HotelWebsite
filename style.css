@@ -1035,6 +1035,29 @@ footer {
     }
 }
 
+
+@media screen and (max-width : 520px) {
+
+    .contactForm,
+    .btn {
+        background: none;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .sub-headline-1 {
+        font-size: 6rem;
+        line-height: 5rem;
+    }
+
+    .wrapperc {
+        padding-top: 0px;
+        grid: none;
+        width: 300px;
+    }
+}
+
 @media screen and (min-width:500px) and (max-width : 964px) {
     .DescriptionRoom {
         display: block;
@@ -1086,9 +1109,24 @@ footer {
 
 }
 
-@media screen and (max-width:500px) {
-    .containerCalendar {
-        display: none;
+@media screen and (max-width:466px) {
+    .calendar {
+        width: 35rem;
+        background-color: white;
+    }
+
+    .months {
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+    .days {
+        padding: 0rem;
+        justify-content: initial;
+    }
+
+    .days div {
+        margin: -0.38rem;
     }
 }
 
