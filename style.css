@@ -20,6 +20,7 @@ html {
     font-size: 10px;
     color: var(--body-font);
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 body {
@@ -1112,7 +1113,6 @@ footer {
 @media screen and (max-width:466px) {
     .calendar {
         width: 35rem;
-        background-color: white;
     }
 
     .months {
