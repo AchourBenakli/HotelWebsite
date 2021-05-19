@@ -10,6 +10,8 @@
   <title>Hôtel Le Pleasant-Contact</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <script src="https://unpkg.com/scrollreveal"></script>
+
+
 </head>
 
 <body>
@@ -75,34 +77,29 @@
 
     <div class="contactForm">
       <div class="wrapperc">
-        <form id="myform">
+        <form method="POST" id="myform">
           <div class="input-field">
-            <input type="text" placeholder="Nom" id="name">
+            <input type="text" placeholder="Nom" name="name">
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Objet" id="subjct">
+            <input type="text" placeholder="Objet" name="subject">
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Numero" id="Phone">
+            <input type="text" placeholder="Numero" name="Phone">
           </div>
           <div class="input-field">
-            <input type="text" placeholder="Courriel" id="email">
+            <input type="text" placeholder="Courriel" name="email">
           </div>
-
           <div class="input-field">
-            <textarea id="Message" placeholder="Message"></textarea>
+            <textarea name="Message" placeholder="Message"></textarea>
           </div>
           <div class="btn">
-            <input type="submit" class="submit">
+            <input type="submit" class="submit" id="submitContact">
           </div>
         </form>
       </div>
     </div>
   </section>
-
-
-
-
   <footer>
     <div class="container">
       <div class="back-to-top">
@@ -149,9 +146,10 @@
       </div>
     </div>
   </footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/app.js"></script>
   <script src="js/newsletter.js"></script>
+  <script src="js/contact.js"></script>
 </body>
-
 
 </html>
