@@ -14,7 +14,7 @@ submitContact.addEventListener('click', function sendEmail(event) {
     Subject: inputs.elements["subject"].value,
     Body: inputs.elements["Message"].value,
   }).then(
-    message => alert("mail sent successfully")
+    message => alert("Merci, votre message a bien été envoyé")
   );
 });
 

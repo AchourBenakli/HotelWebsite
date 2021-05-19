@@ -1,16 +1,17 @@
-let newsletter = document.querySelector('.newsletter-input');
+let newsletter = document.getElementById('newsletterId');
 let buttonNewsletter = document.querySelector('#buttonNewsletter');
 
-buttonNewsletter.addEventListener('submit', function (event) {
-  var modele = /^[a-z0-9\-_\.]+@[a-z0-9]+\.[a-z]{2,5}$/;
-  if (modele.test(newsletter)) {
+
+buttonNewsletter.addEventListener('click', function (event) {
+  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(newsletter.value)) {
     event.preventDefault();
-    alert("Merci d'ajouter un email valide !");
+    alert("Votre adresse email a bien ete envoye !");
   }
   else {
     event.preventDefault();
-    alert("Votre adresse email a bien ete envoye !");
+    alert("Merci de renseigner un email valide !");
     return false;
   }
 });
+
 
